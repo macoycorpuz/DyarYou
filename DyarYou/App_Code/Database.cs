@@ -12,8 +12,8 @@ class Database : IDatabase, IDisposable
 {
     #region Database Configurations
 
-    private string dataSource = "RYU-PC\\SQLEXPRESS";
-    private string initialCatalog = "db_GundamShop";
+    private string dataSource = ".\\SQLEXPRESS";
+    private string initialCatalog = "DyarYou";
     private string userID = "burger";
     private string password = "burger";
 
