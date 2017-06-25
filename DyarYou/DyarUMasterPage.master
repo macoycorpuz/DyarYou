@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DyarUMasterPage.master.cs" Inherits="DyarUMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>DyarU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-func.js"></script>
+    <asp:ContentPlaceHolder id="Head" runat="server">
+        //For Sub Pages
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="shell">
+      <div id="header">
+        <asp:Image runat="server" ImageUrl="~/css/images/DyarULogo.png"/>
+        <div class="top-bar">
+          <div class="links"> <a href="Login.aspx">SIGN IN</a> <a href="Register.aspx">SIGN UP</a></div>
+          <div class="cl">&nbsp;</div>
+          <div id="search">
+            <div runat="server" action="#" method="post">
+              <label for="search-string">IM LOOKING FOR</label>
+              <div class="fields">
+                <asp:TextBox runat="server" ID="tb_Tag" CssClass="field" />
+                <asp:Button runat="server" ID="btn_Tag" CssClass="submit" OnClick="btn_Tag_Click" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="navigation">
+        <ul>
+          <li><a href="Homepage.aspx">HOME</a></li>
+          <li><a href="Article.aspx?Category=Technology">TECHNOLOGY</a></li>
+          <li><a href="Article.aspx?Category=Entertainment">ENTERTAINMENT</a></li>
+          <li><a href="Article.aspx?Category=Bussiness">BUSSINESS</a></li>
+          <li><a href="Article.aspx?Category=Sports">SPORTS</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a><asp:LinkButton runat="server" ID="lb_MyArt" Text="MY ARTICLES" Visible="false" OnClick="MyArt_Click"/></a></li>
+          <li><a><asp:label runat="server" ID="lb_Admin" Text="ADMIN" Visible="false"/></a></li>
+        </ul>
+        <div class="cl">&nbsp;</div>
+      </div>
+      <div id="main">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder" runat="server">
+            // For Sub Pages
+        </asp:ContentPlaceHolder>
+        <div id="sidebar">
+          <div class="nav-box">
+            <h2><span>CATEGORIES</span></h2>
+            <ul>
+              <li><a href="#">Cras nec lorem lecturs</a></li>
+              <li><a href="#">Nunc pell entesq</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Amet sit laoreet</a></li>
+              <li><a href="#">Lectus sit amet</a></li>
+              <li><a href="#">Pellenstesuq nunc lorem</a></li>
+            </ul>
+          </div>
+          <div class="nav-box">
+            <h2><span>ARCHIVES</span></h2>
+            <ul>
+              <li><a href="#">August 2009</a></li>
+              <li><a href="#">July 2009</a></li>
+              <li><a href="#">June 2009</a></li>
+              <li><a href="#">May 2009</a></li>
+            </ul>
+          </div>
+          <div class="nav-box">
+            <h2><span>TAGS</span></h2>
+            <ul>
+              <li><a href="#">Pellenstesque</a></li>
+              <li><a href="#">Nunc lorem</a></li>
+              <li><a href="#">Lectus sit</a></li>
+              <li><a href="#">Sit laoreet</a></li>
+              <li><a href="#">Sit amet</a></li>
+              <li><a href="#">Laoreet lectus nunc</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="banners">
+          <div class="banner"> <a href="#"><img src="css/images/small-banner.gif" alt="" /></a> </div>
+          <div class="banner"> <a href="#"><img src="css/images/big-banner.gif" alt="" /></a> </div>
+        </div>
+        <div class="cl">&nbsp;</div>
+      </div>
+      <div id="footer">
+        <p class="lf">Copyright &copy; 2017 <a href="#">DyarU</a> - All Rights Reserved</p>
+        <p class="rf">Design by <a href="http://chocotemplates.com/">ChocoTemplates.com</a></p>
+        <div style="clear:both;"></div>
+      </div>
+    </div>
+    </form>
+
+</body>
+</html>
