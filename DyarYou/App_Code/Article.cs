@@ -11,6 +11,7 @@ public class Article
 {
     #region Attributes
     private DataSet _articles;
+    private DataSet _feedbacks;
     #endregion
 
     #region Properties
@@ -21,11 +22,19 @@ public class Article
             return _articles;
         }
     }
+
+    public DataSet Feedbacks
+    {
+        get
+        {
+            return _feedbacks;
+        }
+    }
     #endregion
 
     #region Methods
     public Article()
-	{
+    {
         _articles = new DataSet();
     }
     ~Article()
@@ -35,9 +44,9 @@ public class Article
     public void GetArticle(string type, string args)
     {
         _articles.Clear();
-        using(Helper db = new Helper())
+        using (Helper db = new Helper())
         {
-            switch(type)
+            switch (type)
             {
                 case "All":
                     {
@@ -56,7 +65,7 @@ public class Article
                     }
                 case "Tag":
                     {
-                         _articles = db.ExecDataSetProc("sp_GetArticle_Tag", "@Tag", args);
+                        _articles = db.ExecDataSetProc("sp_GetArticle_Tag", "@Tag", args);
                         break;
                     }
                 case "FP":
@@ -72,6 +81,26 @@ public class Article
                 default:
                     break;
             }
+        }
+    }
+
+    public void loadfeedbacks(string post)
+    {
+        //_feedbacks.Clear();
+        
+        using (Helper db = new Helper())
+        {
+
+            _feedbacks = db.ExecDataSetProc("sp_GetFeedback_Title","@Title", post);
+        }
+
+    }
+
+    public void addfeedback(params object[] args)
+    {
+        using (Helper db = new Helper())
+        {
+            db.ExecNonQueryProc("sp_AddFeedback_Title", args);
         }
     }
     #endregion
