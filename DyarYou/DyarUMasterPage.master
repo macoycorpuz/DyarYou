@@ -83,8 +83,10 @@
           </div>
         </div>
         <div id="banners">
-          <div class="banner"> <a href="#"><img src="css/images/small-banner.gif" alt="" /></a> </div>
-          <div class="banner"> <a href="#"><img src="css/images/big-banner.gif" alt="" /></a> </div>
+          <div class="banner"> <asp:AdRotator id="controlName" runat="server"  AdvertisementFile="adsmall.xml" Target="_self">
+</asp:AdRotator> </div>
+          <div class="banner"> <asp:AdRotator id="AdRotator1" runat="server"  AdvertisementFile="adbig.xml" Target="_self">
+</asp:AdRotator> </div>
         </div>
         <div class="cl">&nbsp;</div>
       </div>

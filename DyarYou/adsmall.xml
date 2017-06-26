@@ -1,0 +1,28 @@
+<Advertisements>
+    <Ad>
+        <ImageUrl>css/images/abelsmall.gif</ImageUrl>
+        <NavigateUrl>https://www.facebook.com/gabriel.i.abel</NavigateUrl>
+        <AlternateText>Gabriel Abel Facebook Link</AlternateText>
+        <Keyword>A</Keyword>
+        <Impressions>Technology</Impressions>
+        <Caption>This is the caption for Ad#1</Caption> 
+    </Ad>
+
+    <Ad>
+        <ImageUrl>css/images/marcuzsmall.gif</ImageUrl>
+        <NavigateUrl>https://www.facebook.com/macoy.corpuz</NavigateUrl>
+        <AlternateText>Marcuz Corpuz Facebook Link</AlternateText>
+        <Keyword>S</Keyword>
+        <Impressions>Web Site</Impressions>
+        <Caption>This is the caption for Ad#2</Caption> 
+    </Ad>
+
+    <Ad>
+        <ImageUrl>css/images/kylesmall.gif</ImageUrl>
+        <NavigateUrl>https://www.facebook.com/floresta.kyle</NavigateUrl>
+        <AlternateText>Kyle Floresta Facebook Link</AlternateText>
+        <Keyword>S</Keyword>
+        <Impressions>Flash Site</Impressions>
+        <Caption>This is the caption for Ad#2</Caption> 
+    </Ad>
+</Advertisements>
